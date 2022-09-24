@@ -6,7 +6,7 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state = {
-      textoFrase: '',
+      textoFrase: 'Nenhuma frase ainda.',
     };
 
     this.quebraBiscoito = this.quebraBiscoito.bind(this);
@@ -26,7 +26,7 @@ class App extends Component{
   quebraBiscoito(){
     let state = this.state;
     let numeroAleatorio = Math.floor(Math.random() * this.frases.length);
-    state.textoFrase = `" ${this.frases[numeroAleatorio]} "`;
+    state.textoFrase = `"${this.frases[numeroAleatorio]}"`;
     this.setState(state);
   }
 
